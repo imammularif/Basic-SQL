@@ -1,9 +1,10 @@
 
 -- INTRO
 
+<--CREATE DB-->
 CREATE DATABASE belajar_query;
 
-
+<--CREATE TABLE-->
 CREATE TABLE TB_BUKU (
     ID_BUKU varchar(255) PRIMARY KEY,
     ISBN varchar(255),
@@ -13,6 +14,21 @@ CREATE TABLE TB_BUKU (
     HARGA_BUKU varchar(225),
     STOK VARCHAR(225)
 );
+
+create table TB_PENERBIT (
+	ID_PENERBIT varchar(255) PRIMARY KEY,
+	NAMA_PENERBIT varchar(255),
+	ALAMAT varchar(255),
+	TELPON varchar(255)
+);
+
+create table TB_PENGARANG (
+	ID_PENGARANG varchar(255) PRIMARY KEY,
+	NAMA_PENGARANG varchar(255),
+	JENIS_KELAMIN varchar(255)
+);
+
+<--INSERT DATA IN TABLE-->
 
 INSERT INTO tb_buku (id_buku, ISBN, JUDUL_BUKU, ID_PENERBIT, ID_PENGARANG, HARGA_BUKU, STOK)
 VALUES ('BK001', '978-979-29-1234-1', 'PENGANTAR BASIS DATA', 'PNB01', 'PNG03', '75,000', '3'),
@@ -27,13 +43,6 @@ VALUES ('BK001', '978-979-29-1234-1', 'PENGANTAR BASIS DATA', 'PNB01', 'PNG03', 
 ('BK0010', '978-979-29-1011-1', 'MAHIR MENGGUNAKAN DATABASE ORACLE', 'PNB02', 'PNG04', '225,000', '9');
 
 
-create table TB_PENERBIT (
-	ID_PENERBIT varchar(255) PRIMARY KEY,
-	NAMA_PENERBIT varchar(255),
-	ALAMAT varchar(255),
-	TELPON varchar(255)
-);
-
 INSERT INTO tb_penerbit (ID_PENERBIT, NAMA_PENERBIT, ALAMAT, TELPON)
 VALUES ('PNB01', 'LENTERA ILMU', 'JAKARTA', '(021)212987'),
 ('PNB02', 'PUSTAKA INDONESIA', 'BANDUNG', '(022)127576'),
@@ -42,21 +51,16 @@ VALUES ('PNB01', 'LENTERA ILMU', 'JAKARTA', '(021)212987'),
 ('PNB05', 'YUDHISTIRA', '', '(021)8080880');
 
 
-create table TB_PENGARANG (
-	ID_PENGARANG varchar(255) PRIMARY KEY,
-	NAMA_PENGARANG varchar(255),
-	JENIS_KELAMIN varchar(255)
-);
-
 INSERT INTO tb_pengarang (ID_PENGARANG, NAMA_PENGARANG, JENIS_KELAMIN)
 values ('PNG01', 'ABDUL KADIR', 'LAKI-LAKI'),
 ('PNG02', 'SRI WAHYUNI', 'PEREMPUAN'),
 ('PNG03', 'FATHANSSYAH', 'LAKI-LAKI'),
 ('PNG04', 'TRI RISMA SETIA', 'PEREMPUAN');
 
---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- CASE
+
 
 select HARGA_BUKU from tb_buku
 order by HARGA_BUKU desc
