@@ -1,4 +1,4 @@
-# Basic-SQL (CREATE, INSERT, & SELECT)
+## Basic-SQL (CREATE, INSERT, & SELECT)
 - Membuat Database :
 
    ```bash
@@ -105,7 +105,7 @@
 	![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_PENGARANG.png)
 
 
-# Contoh studi kasus Penerapan query menggunakan fungsi : WHERE, ORDER BY, ASC, DESC, GROUP BY, SUM/COUNT, INNER JOIN, & IF_ELSE menggunakan statement SELECT.
+## Contoh Studi Kasus Penerapan query menggunakan fungsi : WHERE, ORDER BY, ASC, DESC, GROUP BY, SUM/COUNT, INNER JOIN, & IF_ELSE menggunakan statement SELECT.
 
 
 
