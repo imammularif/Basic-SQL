@@ -69,7 +69,7 @@
     SELECT * FROM  tb_buku;
      ```
 
-	![Hasil Query]([images/hasil-select.png](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_BUKU.png))
+	![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_BUKU.png)
     
   - Tabel Penerbit
  
