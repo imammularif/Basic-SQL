@@ -107,7 +107,7 @@
 
 ## Contoh Studi Kasus Penerapan query menggunakan fungsi : WHERE, ORDER BY, ASC, DESC, GROUP BY, SUM/COUNT, INNER JOIN, & IF_ELSE menggunakan statement SELECT.
 
-1. Menampilkan data judul buku pada table buku yang ID_PENERBITNYA "PNBO5".
+1. Menampilkan data pada table buku yang ID_PENERBITNYA "PNBO5".
    ```bash 
 	select * from tb_buku tb where ID_PENERBIT = 'PNB05';
    ```
