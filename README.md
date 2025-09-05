@@ -102,8 +102,8 @@
      ```bash
     SELECT * FROM  tb_pengarang;
      ```
+	![Hasil Query]([images/hasil-select.png](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_PENGARANG.png))
 
-	![Hasil Query]([images/hasil-select.png](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_BUKU.png)](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_PENGARANG.png))
 
 
 	
