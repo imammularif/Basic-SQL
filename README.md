@@ -33,10 +33,15 @@
     
   - Tabel Pengarang
 
-   ```bash
-   CREATE TABLE TB_PENGARANG (
-	ID_PENGARANG varchar(255) PRIMARY KEY,
-	NAMA_PENGARANG varchar(255),
-	JENIS_KELAMIN varchar(255)
-   );
-     ```
+	   ```bash
+	  CREATE TABLE TB_PENGARANG (
+	  ID_PENGARANG varchar(255) PRIMARY KEY,
+	  NAMA_PENGARANG varchar(255),
+	  JENIS_KELAMIN varchar(255)
+	   );
+	   ```
+    ```bash
+	 show tables;
+	```
+
+	
