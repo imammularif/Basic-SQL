@@ -40,8 +40,12 @@
 	  JENIS_KELAMIN varchar(255)
 	   );
 	   ```
- ```bash
-show tables;
-```
+
+- Menampilkan Tabel
+   ```bash
+	show tables;
+   ```
+   ![Show table](https://github.com/imammularif/Basic-SQL/blob/main/SS/Show%20tables.png)
+
 
 	
