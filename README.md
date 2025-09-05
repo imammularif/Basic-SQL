@@ -107,6 +107,35 @@
 
 ## Contoh Studi Kasus Penerapan query menggunakan fungsi : WHERE, ORDER BY, ASC, DESC, GROUP BY, SUM/COUNT, INNER JOIN, & IF_ELSE menggunakan statement SELECT.
 
+1. Menampilkan data judul buku pada table buku yang ID_PENERBITNYA "PNBO5".
+   ```bash 
+	select * from tb_buku tb where ID_PENERBIT = 'PNB05';
+   ```
+
+   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/1.png)
+
+2. Menampilkan Harga buku pada table buku, urutkan dari terbesar ke terkecil. tampilkan datanya hanya 3.
+   
+   ```bash 
+	select * from tb_buku tb where ID_PENERBIT = 'PNB05';
+   ```
+
+   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/2.png)
+
+3. Menampilkan id_buku, ISBN, judul_buku, nama_penerbit, alamat, telpon dari table buku dan cari datanya yang id penerbitnya PNB03
+
+   ```bash 
+	select a.ID_BUKU, a.ISBN, a.JUDUL_BUKU, b.NAMA_PENERBIT, b.ALAMAT, b.TELPON
+	from tb_buku a
+	inner join tb_penerbit b on a.id_penerbit = b.id_penerbit
+	where b.id_penerbit = 'PNB03';
+   ```
+
+   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/3.png)
+
+NOTE : Hanya segitu dulu aja ya case querynya ya yang bisa saya share, dikarenakan sangat banyak dan rumit(hehehe, author awalnya dibikin geleng kepala belajar algoritma begini,,hehehe),sisanya coba di pelajari di internet, ada kok. Salam. 
+   
+
 
 
 	
