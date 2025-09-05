@@ -40,8 +40,8 @@
 	  JENIS_KELAMIN varchar(255)
 	   );
 	   ```
-    ```bash
-	 show tables;
-	```
+ ```bash
+show tables;
+```
 
 	
