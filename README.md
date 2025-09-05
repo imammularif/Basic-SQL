@@ -86,8 +86,8 @@
       ```bash
     SELECT * FROM  tb_penerbit;
       ```
-
-	![Hasil Query]([images/hasil-select.png](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_BUKU.png)](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_PENERBIT.png))
+      
+	![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_PENERBIT.png)
     
   - Table Pengarang
 
@@ -102,7 +102,7 @@
      ```bash
     SELECT * FROM  tb_pengarang;
      ```
-	![Hasil Query]([images/hasil-select.png](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_PENGARANG.png))
+	![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_PENGARANG.png)
 
 
 
