@@ -16,9 +16,7 @@
     ID_PENERBIT varchar(255),
     ID_PENGARANG varchar(255),
     HARGA_BUKU varchar(225),
-    STOK VARCHAR(225)
-);
-
+    STOK VARCHAR(225));
      ```
     
   - Tabel Penerbit
