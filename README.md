@@ -133,7 +133,7 @@
 
    ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/3.png)
 
-NOTE : Hanya segitu dulu aja ya case querynya ya yang bisa saya share, dikarenakan sangat banyak dan rumit(hehehe, author awalnya dibikin geleng kepala belajar algoritma begini,,hehehe),sisanya coba di pelajari di internet, ada kok. Salam. 
+NOTE : Hanya segitu dulu aja ya case querynya ya yang bisa saya share, dikarenakan sangat banyak dan rumit(hehehe, author awalnya dibikin geleng kepala belajar algoritma begini,,hehehe. awalnya author mulai memhami sql, sewaktu kuliah, author tertarik dengan namanya data, ilmu sains dll. nah ketika ada rekrutment di pekerjaan pertama saya di pln icon plus setelah saya diwisuda jul 2023, dan mengikutin tahapan rekrutmenya selama 2 bulan, dan tiba tiba hr nyuruh saya coba bealih ke posisi technikal support karena di cv saya tertuli (database analysis)nah, h-2 sebelum di interview ulang. saya belajar betul2 sebelum interview technikal oleh hr saya saat itu soal sql ini. karena sejatinya saya gk ngerti sql ini sewaktu kulaih..hehehehe..itu saja yang saya bisa ceritakan), sisanya coba di pelajari di internet, ada kok. Salam. 
    
 
 
