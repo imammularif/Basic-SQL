@@ -64,6 +64,12 @@
 	('BK009', '978-979-29-9899-1', 'INDONESIA KAYA', 'PNB04', 'PNG03', '30,000', '7'),
 	('BK0010', '978-979-29-1011-1', 'MAHIR MENGGUNAKAN DATABASE ORACLE', 'PNB02', 'PNG04', '225,000', '9');
      ```
+
+     ```bash
+    SELECT * FROM  tb_buku;
+     ```
+
+	![Hasil Query]([images/hasil-select.png](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_BUKU.png))
     
   - Tabel Penerbit
  
@@ -76,6 +82,12 @@
 	('PNB05', 'YUDHISTIRA', '', '(021)8080880');
 
      ```
+
+      ```bash
+    SELECT * FROM  tb_penerbit;
+      ```
+
+	![Hasil Query]([images/hasil-select.png](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_BUKU.png)](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_PENERBIT.png))
     
   - Table Pengarang
 
@@ -86,6 +98,12 @@
 	('PNG03', 'FATHANSSYAH', 'LAKI-LAKI'),
 	('PNG04', 'TRI RISMA SETIA', 'PEREMPUAN');
      ```
+
+     ```bash
+    SELECT * FROM  tb_pengarang;
+     ```
+
+	![Hasil Query]([images/hasil-select.png](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_BUKU.png)](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_PENGARANG.png))
 
 
 	
