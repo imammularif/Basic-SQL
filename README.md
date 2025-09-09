@@ -1,4 +1,4 @@
-## Basic-SQL (CREATE, INSERT, & SELECT)
+## Basic-SQL (CREATE, INSERT, SELECT & UPDATE)
 
 Project ini saya kerjakan menggunakan **MySQL Server (via XAMPP)** sebagai database,  
 dan **DBeaver** sebagai tools untuk menjalankan query serta mengelola data.  
@@ -118,7 +118,7 @@ dan **DBeaver** sebagai tools untuk menjalankan query serta mengelola data.
 	![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_PENGARANG.png)
 
 
-## Contoh Studi Kasus Penerapan query menggunakan fungsi : WHERE, ORDER BY, ASC, DESC, GROUP BY, SUM/COUNT, INNER JOIN, & IF_ELSE menggunakan statement SELECT.
+## Contoh Studi Kasus
 
 1. Menampilkan data pada table buku yang ID_PENERBITNYA "PNBO5".
    ```bash 
