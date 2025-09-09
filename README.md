@@ -259,6 +259,13 @@ dan **DBeaver** sebagai tools untuk menjalankan query serta mengelola data.
   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/11.png)
 
 
+  **Catatan:**
+Jika masih bingung dengan query-query SQL di atas, silakan pelajari dasar-dasar SQL terlebih dahulu.  
+Referensi yang mudah diikuti: [W3Schools SQL Tutorial](https://www.w3schools.com/sql/)
+
+Tujuan repo ini bukan hanya untuk portfolio pribadi, tapi juga bisa jadi bahan belajar bagi siapa saja yang ingin memahami SQL dasar sampai menengah. 🚀
+
+
 
 
    
