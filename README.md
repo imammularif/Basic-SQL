@@ -114,15 +114,17 @@
 
    ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/1.png)
 
-2. Menampilkan Harga buku pada table buku, urutkan dari terbesar ke terkecil. tampilkan datanya hanya 3.
+2. Tampilkan 3 judul_buku dari tabel TB_BUKU dengan harga termahal
    
    ```bash 
-	select * from tb_buku tb where ID_PENERBIT = 'PNB05';
+	select JUDUL_BUKU, HARGA_BUKU from tb_buku
+	order by HARGA_BUKU desc
+	limit 3;
    ```
 
-   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/2.png)
+   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/2_new.png)
 
-3. Menampilkan id_buku, ISBN, judul_buku, nama_penerbit, alamat, telpon dari table buku dan cari datanya yang id penerbitnya PNB03
+3. Tampilkan data dari tabel TB_BUKU dan Tabel TB_PENERBIT dengan ID_PENERBIT = PNB03 dengan Field sbb (ID_BUKU, ISBN, JUDUL_BUKU, NAMA_PENERBIT, ALAMAT, TELPON)
 
    ```bash 
 	select a.ID_BUKU, a.ISBN, a.JUDUL_BUKU, b.NAMA_PENERBIT, b.ALAMAT, b.TELPON
@@ -132,6 +134,15 @@
    ```
 
    ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/3.png)
+
+4. Pada tabel TB_PENGARANG Sesuaikan Nama_pengarang : PNG03 = PLNICONPLUS dan PNG04 = JAYAJAYAJAYA
+
+
+
+
+
+
+   
 
 NOTE : Hanya segitu dulu aja ya case querynya ya yang bisa saya share, dikarenakan sangat banyak dan rumit(hehehe, author awalnya dibikin geleng kepala belajar algoritma begini,,hehehe. awalnya author mulai memhami sql, sewaktu kuliah, author tertarik dengan namanya data, ilmu sains dll. nah ketika ada rekrutment di pekerjaan pertama saya di pln icon plus setelah saya diwisuda jul 2023, dan mengikutin tahapan rekrutmenya selama 2 bulan, dan tiba tiba hr nyuruh saya coba bealih ke posisi technikal support karena di cv saya tertuli (database analysis)nah, h-2 sebelum di interview ulang. saya belajar betul2 sebelum interview technikal oleh hr saya saat itu soal sql ini. karena sejatinya saya gk ngerti sql ini sewaktu kulaih..hehehehe..itu saja yang saya bisa ceritakan), sisanya coba di pelajari di internet, ada kok. Salam. 
    
