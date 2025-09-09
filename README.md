@@ -154,7 +154,35 @@
    ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/4.png)
 
 
-5. 
+5. Tampilkan judul buku dengan alamat penerbit di luar Jakarta
+
+    ```bash 
+	select * from tb_pengarang;
+   ```
+    
+    ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/5.png)
+
+
+6. Urutkan jumlah stok dari tabel TB_BUKU dari terbesar hingga terkecil
+   
+   ```bash 
+	select judul_buku, stok from tb_buku order by STOK desc;
+   ```
+
+   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/6.png)
+   
+
+7. Hitung total rupiah yang didapatkan untuk penjualan buku yg mempunyai judul kata-kata 'basis data'
+
+  ```bash 
+	select judul_buku, stok from tb_buku order by STOK desc;
+   ```
+
+8. 
+
+
+
+   
 
 
 
