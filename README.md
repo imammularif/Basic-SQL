@@ -136,6 +136,25 @@
    ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/3.png)
 
 4. Pada tabel TB_PENGARANG Sesuaikan Nama_pengarang : PNG03 = PLNICONPLUS dan PNG04 = JAYAJAYAJAYA
+   - Update 1
+   ```bash 
+	update tb_pengarang set nama_pengarang = 'PLNICONPLUS' where ID_PENGARANG = 'PNG03';
+   ```
+   - Update 2
+   ```bash 
+	update tb_pengarang set nama_pengarang = 'JAYAJAYAJAYA' where ID_PENGARANG = 'PNG04';
+   ```
+   ```bash 
+	select * from tb_pengarang;
+   ```
+
+   (sebelum UPDATE)
+   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/4_seb.png)
+   (setelah UPDATE)
+   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/4.png)
+
+
+5. 
 
 
 
