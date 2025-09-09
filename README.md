@@ -1,4 +1,17 @@
 ## Basic-SQL (CREATE, INSERT, & SELECT)
+
+Project ini saya kerjakan menggunakan **MySQL Server (via XAMPP)** sebagai database,  
+dan **DBeaver** sebagai tools untuk menjalankan query serta mengelola data.  
+
+### Fitur:
+- Membuat dan mengelola tabel dengan MySQL
+- Menjalankan query SQL (SELECT, JOIN, GROUP BY, dll) menggunakan DBeaver
+- Menyimpan hasil query untuk analisis lebih lanjut  
+
+### Tools yang digunakan:
+- **MySQL (XAMPP)**
+- **DBeaver**
+
 - Membuat Database :
 
    ```bash
