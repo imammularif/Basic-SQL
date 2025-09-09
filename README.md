@@ -157,7 +157,10 @@
 5. Tampilkan judul buku dengan alamat penerbit di luar Jakarta
 
     ```bash 
-	select * from tb_pengarang;
+	select a.JUDUL_BUKU, b.ALAMAT
+	from tb_buku a
+	inner join tb_penerbit b on a.id_penerbit = b.id_penerbit
+	where b.ALAMAT not like 'JAKARTA';
    ```
     
     ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/5.png)
@@ -175,23 +178,76 @@
 7. Hitung total rupiah yang didapatkan untuk penjualan buku yg mempunyai judul kata-kata 'basis data'
 
   ```bash 
-	select judul_buku, stok from tb_buku order by STOK desc;
+	select 
+	SUM(HARGA_BUKU) as TOTAL
+	from tb_buku
+	where JUDUL_BUKU like '%BASIS DATA'
    ```
 
-8. 
+![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/7.png)
 
 
 
+8. Tampilkan filed judul buku, pengarang, harga buku, stok, kondisi stok dengan aturan kondisi stok aman jika stok lebih dari 5 dan warning jika stok sama dengan atau kurang dari 5
+
+   ```bash 
+	select a.JUDUL_BUKU, b.NAMA_PENGARANG, a.HARGA_BUKU, a.STOK ,
+	CASE 
+	        WHEN stok > 5 THEN 'Aman'
+	        ELSE 'Warning'
+	    END AS kondisi_stok
+	from tb_buku a
+	inner join tb_pengarang b on a.id_pengarang = b.id_pengarang 
+   ```
+   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/8.png)
    
+9. Tampilkan filed Nama penerbit, jumlah buku, komisi , komisi penerbit adalah 25% dari total rupiah semua penjualan buku
+
+	 ```bash 
+	select NAMA_PENERBIT, STOK as JUMLAH_BUKU,
+   COUNT(a.ID_BUKU) AS jumlah_buku,
+   SUM(a.harga_buku * a.stok) * 0.25 AS komisi_penerbit
+	from tb_buku a
+	inner join tb_penerbit b on a.id_penerbit = b.id_penerbit
+	group by NAMA_PENERBIT;
+   ```
+
+   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/9.png)
+    
+10. Jika Pengarang mendapatkan 5% dari total penjualan, hitung rupiah yang didapatkan masing-masing pengarang jika semua stok terjual
+
+	 ```bash 
+	select a.JUDUL_BUKU, b.NAMA_PENGARANG, a.HARGA_BUKU, a.STOK ,
+	SUM(a.HARGA_BUKU * a.STOK) AS Total_Penjualan,
+	    (SUM(a.HARGA_BUKU * a.STOK) * 0.05) AS Komisi_Pengarang
+	from tb_buku a
+	inner join tb_pengarang b on a.id_pengarang = b.id_pengarang
+	GROUP BY 
+	    a.JUDUL_BUKU, 
+	    b.NAMA_PENGARANG, 
+	    a.HARGA_BUKU, 
+	    a.STOK;
+    ```
+
+  ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/10.png)
+
+
+11. Tampilkan field judul buku, harga buku, kategori harga, pada kategori harga ditampilkan murah jika harga dibawah 100.000 dan mahal jika diatas
+
+	 ```bash 
+	select JUDUL_BUKU, HARGA_BUKU,
+	case
+		when HARGA_BUKU > 100000 then 'MAHAL'
+		else 'MURAH'
+	end as KATEGORI_HARGA
+	from TB_BUKU;
+    ```
+
+  ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/11.png)
 
 
 
 
-
-
-   
-
-NOTE : Hanya segitu dulu aja ya case querynya ya yang bisa saya share, dikarenakan sangat banyak dan rumit(hehehe, author awalnya dibikin geleng kepala belajar algoritma begini,,hehehe. awalnya author mulai memhami sql, sewaktu kuliah, author tertarik dengan namanya data, ilmu sains dll. nah ketika ada rekrutment di pekerjaan pertama saya di pln icon plus setelah saya diwisuda jul 2023, dan mengikutin tahapan rekrutmenya selama 2 bulan, dan tiba tiba hr nyuruh saya coba bealih ke posisi technikal support karena di cv saya tertuli (database analysis)nah, h-2 sebelum di interview ulang. saya belajar betul2 sebelum interview technikal oleh hr saya saat itu soal sql ini. karena sejatinya saya gk ngerti sql ini sewaktu kulaih..hehehehe..itu saja yang saya bisa ceritakan), sisanya coba di pelajari di internet, ada kok. Salam. 
    
 
 
