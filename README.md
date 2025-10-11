@@ -120,7 +120,6 @@ dan **DBeaver** sebagai tools untuk menjalankan query serta mengelola data.
 
 ## Contoh Studi Kasus
 
-1. Menampilkan data pada table buku yang ID_PENERBITNYA "PNBO5".
    ```bash 
 	select * from tb_buku tb where ID_PENERBIT = 'PNB05';
    ```
