@@ -103,19 +103,21 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
     
   - Table Pengarang
 
-	 ```bash
+	```bash
 	INSERT INTO tb_pengarang (ID_PENGARANG, NAMA_PENGARANG, JENIS_KELAMIN)
 	VALUES ('PNG01', 'ABDUL KADIR', 'LAKI-LAKI'),
 	('PNG02', 'SRI WAHYUNI', 'PEREMPUAN'),
 	('PNG03', 'FATHANSSYAH', 'LAKI-LAKI'),
 	('PNG04', 'TRI RISMA SETIA', 'PEREMPUAN');
-     ```
+ 	```
 
-     ```bash
+   ```bash
     SELECT * FROM  tb_pengarang;
-     ```
+   ```
 
 ## Contoh Studi Kasus
+
+1. select * from tb_buku tb where ID_PENERBIT = 'PNB05';
 
    ```bash 
 	select * from tb_buku tb where ID_PENERBIT = 'PNB05';
