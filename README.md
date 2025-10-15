@@ -1,16 +1,20 @@
-## Basic-SQL (CREATE, INSERT, SELECT & UPDATE)
+# Basic SQL
 
-Project ini saya kerjakan menggunakan **MySQL Server (via XAMPP)** sebagai database,  
-dan **DBeaver** sebagai tools untuk menjalankan query serta mengelola data.  
+## 📌 Project Overview
+This repository is created to **learn and practice basic SQL commands**.  
+The goal is to understand and implement common SQL operations such as `CREATE`, `INSERT`, `SELECT`, and simple queries for data analysis.
 
-### Fitur:
-- Membuat dan mengelola tabel dengan MySQL
-- Menjalankan query SQL (SELECT, JOIN, GROUP BY, dll) menggunakan DBeaver
-- Menyimpan hasil query untuk analisis lebih lanjut  
+---
 
-### Tools yang digunakan:
-- **MySQL (XAMPP)**
-- **DBeaver**
+## 🛠️ Tools Used
+- **MySQL / PostgreSQL** – for executing SQL queries  
+- **MySQL Workbench / pgAdmin** – optional GUI tools for running queries  
+- **CSV Dataset (optional)** – sample dataset for practice
+
+---
+
+
+
 ##
 - Membuat Database :
 
