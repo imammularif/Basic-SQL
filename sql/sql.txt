@@ -1,0 +1,123 @@
+
+-- INTRO
+
+<--CREATE DB-->
+CREATE DATABASE belajar_query;
+
+<--CREATE TABLE-->
+CREATE TABLE TB_BUKU (
+    ID_BUKU varchar(255) PRIMARY KEY,
+    ISBN varchar(255),
+    JUDUL_BUKU varchar(255),
+    ID_PENERBIT varchar(255),
+    ID_PENGARANG varchar(255),
+    HARGA_BUKU varchar(225),
+    STOK VARCHAR(225)
+);
+
+create table TB_PENERBIT (
+	ID_PENERBIT varchar(255) PRIMARY KEY,
+	NAMA_PENERBIT varchar(255),
+	ALAMAT varchar(255),
+	TELPON varchar(255)
+);
+
+create table TB_PENGARANG (
+	ID_PENGARANG varchar(255) PRIMARY KEY,
+	NAMA_PENGARANG varchar(255),
+	JENIS_KELAMIN varchar(255)
+);
+
+<--INSERT DATA IN TABLE-->
+
+INSERT INTO tb_buku (id_buku, ISBN, JUDUL_BUKU, ID_PENERBIT, ID_PENGARANG, HARGA_BUKU, STOK)
+VALUES ('BK001', '978-979-29-1234-1', 'PENGANTAR BASIS DATA', 'PNB01', 'PNG03', '75,000', '3'),
+('BK002', '978-979-29-4444-1', 'MAHIR MENGGAMBAR ANIME', 'PNB01', 'PNG01', '45,500', '2'),
+('BK003', '978-979-29-4567-1', 'DATA WAREHOUSE', 'PNB05', 'PNG02', '60,000', '1'),
+('BK004', '978-979-29-1212-1', 'SHORTCOURSE: EXCEL 2016', 'PNB02', 'PNG02', '35,000', '5'),
+('BK005', '978-979-29-3232-1', 'LASKAR PEMIMPI', 'PNB02', 'PNG03', '80,000', '4'),
+('BK006', '978-979-29-1010-1', 'PERANCANGAN BASIS DATA', 'PNB02', 'PNG04', '99,000', '0'),
+('BK007', '978-979-29-1111-1', 'ALGORITMA PEMROGRAMAN', 'PNB03', 'PNG04', '125,000', '5'),
+('BK008', '978-979-29-9898-1', 'CATATAN SI UJANG', 'PNB04', 'PNG03', '85,000', '2')
+('BK009', '978-979-29-9899-1', 'INDONESIA KAYA', 'PNB04', 'PNG03', '30,000', '7'),
+('BK0010', '978-979-29-1011-1', 'MAHIR MENGGUNAKAN DATABASE ORACLE', 'PNB02', 'PNG04', '225,000', '9');
+
+
+INSERT INTO tb_penerbit (ID_PENERBIT, NAMA_PENERBIT, ALAMAT, TELPON)
+VALUES ('PNB01', 'LENTERA ILMU', 'JAKARTA', '(021)212987'),
+('PNB02', 'PUSTAKA INDONESIA', 'BANDUNG', '(022)127576'),
+('PNB03', 'ANDRA PUBLISHER', 'YOGYAKARTA', '(0274)123123'),
+('PNB04', 'WAHANA', 'JAKARTA', '(021)222333'),
+('PNB05', 'YUDHISTIRA', '', '(021)8080880');
+
+
+INSERT INTO tb_pengarang (ID_PENGARANG, NAMA_PENGARANG, JENIS_KELAMIN)
+values ('PNG01', 'ABDUL KADIR', 'LAKI-LAKI'),
+('PNG02', 'SRI WAHYUNI', 'PEREMPUAN'),
+('PNG03', 'FATHANSSYAH', 'LAKI-LAKI'),
+('PNG04', 'TRI RISMA SETIA', 'PEREMPUAN');
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- CASE
+
+
+select HARGA_BUKU from tb_buku
+order by HARGA_BUKU desc
+limit 3;
+
+select a.ID_BUKU, a.ISBN, a.JUDUL_BUKU, b.NAMA_PENERBIT, b.ALAMAT, b.TELPON
+from tb_buku a
+inner join tb_penerbit b on a.id_penerbit = b.id_penerbit
+where b.id_penerbit = 'PNB03';
+
+select a.JUDUL_BUKU, b.ALAMAT
+from tb_buku a
+inner join tb_penerbit b on a.id_penerbit = b.id_penerbit
+where b.ALAMAT not like 'JAKARTA';
+
+select * from tb_buku
+order by STOK desc;
+
+select 
+SUM(HARGA_BUKU) as TOTAL
+from tb_buku
+where JUDUL_BUKU like '%BASIS DATA'
+
+select a.JUDUL_BUKU, b.NAMA_PENGARANG, a.HARGA_BUKU, a.STOK ,
+CASE 
+        WHEN stok > 5 THEN 'Aman'
+        ELSE 'Warning'
+    END AS kondisi_stok
+from tb_buku a
+inner join tb_pengarang b on a.id_pengarang = b.id_pengarang 
+
+select NAMA_PENERBIT, STOK as JUMLAH_BUKU,
+   COUNT(a.ID_BUKU) AS jumlah_buku,
+   SUM(a.harga_buku * stok) AS total_penjualan_rupiah,
+   (SUM(a.harga_buku) * a.stok) * 0.25) AS komisi_penerbit
+from tb_buku a
+inner join tb_penerbit b on a.id_penerbit = b.id_penerbit
+group by NAMA_PENERBIT;
+
+
+select a.JUDUL_BUKU, b.NAMA_PENGARANG, a.HARGA_BUKU, a.STOK ,
+SUM(a.HARGA_BUKU * a.STOK) AS Total_Penjualan,
+    (SUM(a.HARGA_BUKU * a.STOK) * 0.05) AS Komisi_Pengarang
+from tb_buku a
+inner join tb_pengarang b on a.id_pengarang = b.id_pengarang
+GROUP BY 
+    a.JUDUL_BUKU, 
+    b.NAMA_PENGARANG, 
+    a.HARGA_BUKU, 
+    a.STOK;
+
+
+select JUDUL_BUKU, HARGA_BUKU,
+case
+	when HARGA_BUKU > 100000 then 'MAHAL'
+	else 'MURAH'
+end as KATEGORI_HARGA
+from TB_BUKU;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
