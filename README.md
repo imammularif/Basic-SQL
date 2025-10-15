@@ -117,7 +117,7 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
 
 ## Contoh Studi Kasus
 
-1. select * from tb_buku tb where ID_PENERBIT = 'PNB05';
+1. Tampilkan data pada table buku pada id_penerbitnya PNB05
 
    ```bash 
 	select * from tb_buku tb where ID_PENERBIT = 'PNB05';
