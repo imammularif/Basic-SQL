@@ -111,9 +111,9 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
 	('PNG04', 'TRI RISMA SETIA', 'PEREMPUAN');
  	```
 
-   ```bash
+   	```bash
     SELECT * FROM  tb_pengarang;
-   ```
+  	 ```
 
 ## Contoh Studi Kasus
 
@@ -170,12 +170,12 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
 
 7. Hitung total rupiah yang didapatkan untuk penjualan buku yg mempunyai judul kata-kata 'basis data'
 
-  ```bash 
+ 	 ```bash 
 	select 
 	SUM(HARGA_BUKU) as TOTAL
 	from tb_buku
 	where JUDUL_BUKU like '%BASIS DATA'
-   ```
+  	 ```
 
 8. Tampilkan filed judul buku, pengarang, harga buku, stok, kondisi stok dengan aturan kondisi stok aman jika stok lebih dari 5 dan warning jika stok sama dengan atau kurang dari 5
 
