@@ -62,7 +62,6 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
    ```bash
 	show tables;
    ```
-   ![Show table](https://github.com/imammularif/Basic-SQL/blob/main/SS/Show%20tables.png)
 
 
 - Input data menggunakan INSERT kedalam table yang sudah dibuat tadi :
@@ -85,8 +84,6 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
      ```bash
     SELECT * FROM  tb_buku;
      ```
-
-	![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_BUKU.png)
     
   - Tabel Penerbit
  
@@ -103,8 +100,6 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
       ```bash
     SELECT * FROM  tb_penerbit;
       ```
-      
-	![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_PENERBIT.png)
     
   - Table Pengarang
 
@@ -119,16 +114,12 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
      ```bash
     SELECT * FROM  tb_pengarang;
      ```
-	![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/SELECT%20TB_PENGARANG.png)
-
 
 ## Contoh Studi Kasus
 
    ```bash 
 	select * from tb_buku tb where ID_PENERBIT = 'PNB05';
    ```
-
-   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/1.png)
 
 2. Tampilkan 3 judul_buku dari tabel TB_BUKU dengan harga termahal
    
@@ -138,8 +129,6 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
 	limit 3;
    ```
 
-   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/2_new.png)
-
 3. Tampilkan data dari tabel TB_BUKU dan Tabel TB_PENERBIT dengan ID_PENERBIT = PNB03 dengan Field sbb (ID_BUKU, ISBN, JUDUL_BUKU, NAMA_PENERBIT, ALAMAT, TELPON)
 
    ```bash 
@@ -148,8 +137,6 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
 	inner join tb_penerbit b on a.id_penerbit = b.id_penerbit
 	where b.id_penerbit = 'PNB03';
    ```
-
-   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/3.png)
 
 4. Pada tabel TB_PENGARANG Sesuaikan Nama_pengarang : PNG03 = PLNICONPLUS dan PNG04 = JAYAJAYAJAYA
    - Update 1
@@ -164,12 +151,6 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
 	select * from tb_pengarang;
    ```
 
-   (sebelum UPDATE)
-   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/4_seb.png)
-   (setelah UPDATE)
-   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/4.png)
-
-
 5. Tampilkan judul buku dengan alamat penerbit di luar Jakarta
 
     ```bash 
@@ -178,18 +159,12 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
 	inner join tb_penerbit b on a.id_penerbit = b.id_penerbit
 	where b.ALAMAT not like 'JAKARTA';
    ```
-    
-    ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/5.png)
-
 
 6. Urutkan jumlah stok dari tabel TB_BUKU dari terbesar hingga terkecil
    
    ```bash 
 	select judul_buku, stok from tb_buku order by STOK desc;
    ```
-
-   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/6.png)
-   
 
 7. Hitung total rupiah yang didapatkan untuk penjualan buku yg mempunyai judul kata-kata 'basis data'
 
@@ -199,10 +174,6 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
 	from tb_buku
 	where JUDUL_BUKU like '%BASIS DATA'
    ```
-
-![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/7.png)
-
-
 
 8. Tampilkan filed judul buku, pengarang, harga buku, stok, kondisi stok dengan aturan kondisi stok aman jika stok lebih dari 5 dan warning jika stok sama dengan atau kurang dari 5
 
@@ -215,7 +186,6 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
 	from tb_buku a
 	inner join tb_pengarang b on a.id_pengarang = b.id_pengarang 
    ```
-   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/8.png)
    
 9. Tampilkan filed Nama penerbit, jumlah buku, komisi , komisi penerbit adalah 25% dari total rupiah semua penjualan buku
 
@@ -227,8 +197,6 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
 	inner join tb_penerbit b on a.id_penerbit = b.id_penerbit
 	group by NAMA_PENERBIT;
    ```
-
-   ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/9.png)
     
 10. Jika Pengarang mendapatkan 5% dari total penjualan, hitung rupiah yang didapatkan masing-masing pengarang jika semua stok terjual
 
@@ -245,9 +213,6 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
 	    a.STOK;
     ```
 
-  ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/10.png)
-
-
 11. Tampilkan field judul buku, harga buku, kategori harga, pada kategori harga ditampilkan murah jika harga dibawah 100.000 dan mahal jika diatas
 
 	 ```bash 
@@ -258,9 +223,6 @@ The goal is to understand and implement common SQL operations such as `CREATE`, 
 	end as KATEGORI_HARGA
 	from TB_BUKU;
     ```
-
-  ![Hasil Query](https://github.com/imammularif/Basic-SQL/blob/main/SS/11.png)
-
 
   **Catatan:**
 Jika masih bingung dengan query-query SQL di atas, silakan pelajari dasar-dasar SQL terlebih dahulu.  
